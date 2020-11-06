@@ -12,6 +12,7 @@ export default class createCategoriesTable1604627386927
             type: 'varchar',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',

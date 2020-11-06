@@ -1,4 +1,9 @@
-import { MigrationInterface, QueryRunner, Table, TableForeignKey, } from 'typeorm';
+import {
+  MigrationInterface,
+  QueryRunner,
+  Table,
+  TableForeignKey,
+} from 'typeorm';
 
 export default class createTransactionsTable1604628433649
   implements MigrationInterface {
@@ -12,6 +17,7 @@ export default class createTransactionsTable1604628433649
             type: 'varchar',
             generationStrategy: 'uuid',
             isPrimary: true,
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',
@@ -52,7 +58,6 @@ export default class createTransactionsTable1604628433649
         referencedColumnNames: ['id'],
         referencedTableName: 'categories',
         onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
       }),
     );
   }
