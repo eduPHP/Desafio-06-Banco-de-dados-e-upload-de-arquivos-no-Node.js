@@ -10,8 +10,8 @@ export default class createCategoriesTable1604627386927
           {
             name: 'id',
             type: 'varchar',
-            generationStrategy: 'uuid',
             isPrimary: true,
+            generationStrategy: 'uuid',
           },
           {
             name: 'title',
